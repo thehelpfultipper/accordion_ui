@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background: #f1f4fa;
+}
+body > * {
+  box-sizing: border-box;
+}
+body #main {
+  width: 480px;
+  background: white;
+  border-radius: 6px;
+  margin: 100px auto;
+  font-family: "Open sans", Ariel, sans-serif;
+  color: #363a55;
+  padding-bottom: 30px;
+  box-shadow: 0 6px 20px rgba(107, 98, 255, 0.2);
+}
+body #main #intro {
+  padding: 30px 40px;
+  position: relative;
+}
+body #main #intro p {
+  font-family: Ariel, sans-serif;
+  letter-spacing: 0.02rem;
+  line-height: 1.4rem;
+  font-size: 0.88rem;
+}
+body #main #intro p a {
+  color: #e94c89;
+}
+body #main #intro:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #f0f4fd;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+body #main #accordion-container {
+  list-style-type: none;
+  padding: 0;
+  width: 90%;
+  margin: 30px auto;
+  display: block;
+}
+body #main #accordion-container .opened {
+  background: #f0f4fd;
+}
+body #main #accordion-container .opened .accordion-icon {
+  background: white;
+}
+body #main #accordion-container .accordion-item {
+  display: flex;
+  flex-direction: column;
+}
+body #main #accordion-container .accordion-item .accordion-head {
+  display: flex;
+}
+body #main #accordion-container .accordion-item .accordion-head .accordion-icon {
+  border-radius: 50%;
+  width: 38px;
+  height: 34px;
+  margin-left: 10px;
+  position: relative;
+  align-self: center;
+  display: flex;
+}
+body #main #accordion-container .accordion-item .accordion-head .accordion-icon span {
+  display: block;
+  background-color: #42455f;
+  width: 15px;
+  height: 2px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: calc(48% - 7.5px);
+  transition: transform 0.2s;
+}
+body #main #accordion-container .accordion-item .accordion-head .accordion-icon span:nth-of-type(2) {
+  transform: rotate(-90deg);
+}
+body #main #accordion-container .accordion-item .accordion-head .accordion-icon span:nth-of-type(2).open-icon {
+  transform: rotate(-180deg);
+}
+body #main #accordion-container .accordion-item .accordion-head button {
+  border: none;
+  background: none;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #42455f;
+  width: 100%;
+  padding: 20px 0 20px 15px;
+  text-align: left;
+}
+body #main #accordion-container .accordion-item .accordion-head + div {
+  padding: 62px;
+  padding-top: 0;
+  font-family: Ariel, sans-serif;
+  letter-spacing: 0.02rem;
+}
+body #main #accordion-container .accordion-item .accordion-head + div #blog-link {
+  background: #6b62ff;
+  border: none;
+  padding: 10px 30px;
+  margin: 15px 0;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  border-radius: 32px;
+}
+body #main #accordion-container .accordion-item .accordion-head + div #blog-link:hover {
+  cursor: pointer;
+}
+body #main #accordion-container .accordion-item .accordion-head + div #blog-link a {
+  color: white;
+  text-decoration: none;
+}
+body #main #accordion-container .accordion-item .accordion-head:hover * {
+  cursor: pointer;
+}
+

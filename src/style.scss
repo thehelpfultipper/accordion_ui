@@ -1,0 +1,147 @@
+$bodyFont: Ariel, sans-serif;
+$mainFont: "Open sans", Ariel, sans-serif;
+$textSpacing: 0.02rem;
+
+body {
+  margin: 0;
+  background: #f1f4fa;
+
+  & > * {
+    box-sizing: border-box;
+  }
+
+  #main {
+    width: 480px;
+    background: white;
+    border-radius: 6px;
+    margin: 100px auto;
+    font-family: $mainFont;
+    color: #363a55;
+    padding-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(107,98,255,.2);
+
+    #intro {
+      padding: 30px 40px;
+      position: relative;
+
+      p {
+        font-family: $bodyFont;
+        letter-spacing: $textSpacing;
+        line-height: 1.4rem;
+        font-size: 0.88rem;
+
+        a {
+          color: #e94c89;
+        }
+      }
+
+      &:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #f0f4fd;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    #accordion-container {
+      list-style-type: none;
+      padding: 0;
+      width: 90%;
+      margin: 30px auto;
+      display: block;
+
+      .opened {
+        background: #f0f4fd;
+
+        .accordion-icon {
+          background: white;
+        }
+      }
+
+      .accordion-item {
+        display: flex;
+        flex-direction: column;
+
+        .accordion-head {
+          display: flex;
+
+          .accordion-icon {
+            // background: pink;
+            border-radius: 50%;
+            width: 38px;
+            height: 34px;
+            margin-left: 10px;
+            position: relative;
+            align-self: center;
+            display: flex;
+
+            span {
+              display: block;
+              background-color: #42455f;
+              width: 15px;
+              height: 2px;
+              border-radius: 5px;
+              position: absolute;
+              top: 50%;
+              left: calc(48% - 15px / 2);
+              transition: transform 0.2s;
+
+              &:nth-of-type(2) {
+                transform: rotate(-90deg);
+
+                &.open-icon {
+                  transform: rotate(-180deg);
+                }
+              }
+            }
+          }
+
+          button {
+            border: none;
+            background: none;
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: #42455f;
+            width: 100%;
+            padding: 20px 0 20px 15px;
+            text-align: left;
+          }
+
+          & + div {
+            padding: 62px;
+            padding-top: 0;
+            font-family: $bodyFont;
+            letter-spacing: $textSpacing;
+
+            #blog-link {
+              background: #6b62ff;
+              border: none;
+              padding: 10px 30px;
+              margin: 15px 0;
+              // position: relative;
+              font-weight: 600;
+              letter-spacing: 0.08rem;
+              border-radius: 32px;
+
+              &:hover {
+                cursor: pointer;
+              }
+
+              a {
+                color: white;
+                text-decoration: none;
+              }
+            }
+          }
+
+          &:hover * {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
