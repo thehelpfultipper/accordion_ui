@@ -15,7 +15,7 @@ Accordions are commonly used in web interfaces to organize content into collapsi
 
 ## Usage
 
-For a detailed walkthrough of the implementation process, refer to the blog post [How To Make A Beautiful Accessible Accordion With SCSS](https://yourblogurl.com/how-to-make-a-beautiful-accessible-accordion-with-scss).
+For a detailed walkthrough of the implementation process, refer to the blog post [How To Make A Beautiful Accessible Accordion With SCSS](https://thehelpfultipper.com/make-beautiful-accessible-accordion-scss/).
 
 ## Resources
 
